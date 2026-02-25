@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Hangman</h1>
+        <p class="subtitle">Guess the word before you run out of tries.</p>
+      </header>
+
+      <main class="card">
+        <section class="top">
+          <div class="stat">
+            <div class="label">Remaining</div>
+            <div id="remaining" class="value">-</div>
+          </div>
+          <div class="stat">
+            <div class="label">Status</div>
+            <div id="status" class="value">-</div>
+          </div>
+          <button id="newGameBtn" class="btn">New game</button>
+        </section>
+
+        <section class="word-area">
+          <div id="maskedWord" class="masked">_ _ _ _ _</div>
+        </section>
+
+        <section class="middle">
+          <div class="panel">
+            <div class="panel-title">Wrong letters</div>
+            <div id="wrongLetters" class="chips"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-title">Keyboard</div>
+            <div id="keyboard" class="keyboard"></div>
+          </div>
+        </section>
+
+        <section class="bottom">
+          <div class="guess-box">
+            <input id="letterInput" maxlength="1" placeholder="Type a letter" autocomplete="off" />
+            <button id="guessBtn" class="btn btn-primary">Guess</button>
+          </div>
+          <div id="message" class="message"></div>
+          <div id="answer" class="answer"></div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Backend: Flask API</span>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
